@@ -8,8 +8,10 @@ import NavbarWrapper from '../components/Navigation/NavbarWrapper';
 import HomeImageMobile from '../assets/home/background-home-mobile.jpg';
 import HomeImageTablet from '../assets/home/background-home-tablet.jpg';
 import HomeImageDesktop from '../assets/home/background-home-desktop.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
   const isTablet = useMediaQuery('(min-width:48rem)'); //768px
   const isDesktop = useMediaQuery('(min-width:64rem)'); //1024px
 
@@ -18,6 +20,7 @@ const Home = () => {
       <NavbarWrapper />
 
       <Box
+        component="main"
         sx={{
           py: isTablet ? '4rem' : '2rem',
           px: '2.2rem',
@@ -40,19 +43,9 @@ const Home = () => {
 
         {/* image */}
         <Box sx={{ width: isDesktop ? '50%' : 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Box
-            sx={{
-              width: isTablet ? 250 : 200,
-              height: isTablet ? 250 : 200,
-              borderRadius: '50%',
-              bgcolor: '#ffffff',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
+          <Button onClick={() => navigate('/destination')}>
             <Typography sx={{ fontFamily: 'Bellefair', fontSize: 24, color: '#000000' }}>EXPLORE</Typography>
-          </Box>
+          </Button>
         </Box>
       </Box>
     </Root>
@@ -72,5 +65,22 @@ const Root = styled(Box)(() => {
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     overflowY: 'hidden',
+  };
+});
+
+const Button = styled(Box)(() => {
+  const isTablet = useMediaQuery('(min-width:48rem)'); //768px
+
+  return {
+    width: isTablet ? 250 : 200,
+    height: isTablet ? 250 : 200,
+    borderRadius: '50%',
+    backgroundColor: '#ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    '&:hover': {
+      cursor: 'pointer',
+    },
   };
 });
