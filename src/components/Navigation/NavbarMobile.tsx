@@ -63,7 +63,8 @@ const LinksMenu = styled(Box)(() => ({
   right: '-275px',
   top: 0,
   transition: 'right 300ms ease-in-out',
-  backdropFilter: 'blur(10px)',
+  backdropFilter: 'blur(30px)',
+  backgroundColor: 'rgba(255, 255, 255, 0.04)',
   padding: '2rem',
 }));
 
