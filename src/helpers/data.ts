@@ -1,7 +1,13 @@
+// DESTINATION
 import MoonPNG from '../assets/destination/image-moon.png';
 import MarsPNG from '../assets/destination/image-mars.png';
 import EuropaPNG from '../assets/destination/image-europa.png';
 import TitanPNG from '../assets/destination/image-titan.png';
+// CREW
+import DouglasPNG from '../assets/crew/image-douglas-hurley.png';
+import MarkPNG from '../assets/crew/image-mark-shuttleworth.png';
+import VictorPNG from '../assets/crew/image-victor-glover.png';
+import AnousehPNG from '../assets/crew/image-anousheh-ansari.png';
 
 export const destinations = [
   {
@@ -47,5 +53,44 @@ export const destinations = [
       'The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.',
     distance: '1.6 bil. km',
     travel: '7 years',
+  },
+];
+
+export const crew = [
+  {
+    name: 'Douglas Hurley',
+    images: {
+      png: DouglasPNG,
+      webp: './assets/crew/image-douglas-hurley.webp',
+    },
+    role: 'Commander',
+    bio: 'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.',
+  },
+  {
+    name: 'Mark Shuttleworth',
+    images: {
+      png: MarkPNG,
+      webp: './assets/crew/image-mark-shuttleworth.webp',
+    },
+    role: 'Mission Specialist',
+    bio: 'Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.',
+  },
+  {
+    name: 'Victor Glover',
+    images: {
+      png: VictorPNG,
+      webp: './assets/crew/image-victor-glover.webp',
+    },
+    role: 'Pilot',
+    bio: 'Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.',
+  },
+  {
+    name: 'Anousheh Ansari',
+    images: {
+      png: AnousehPNG,
+      webp: './assets/crew/image-anousheh-ansari.webp',
+    },
+    role: 'Flight Engineer',
+    bio: 'Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.',
   },
 ];

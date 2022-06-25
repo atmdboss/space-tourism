@@ -12,6 +12,7 @@ import NavbarWrapper from '../components/Navigation/NavbarWrapper';
 import DestinationImageMobile from '../assets/destination/background-destination-mobile.jpg';
 import DestinationImageTablet from '../assets/destination/background-destination-tablet.jpg';
 import DestinationImageDesktop from '../assets/destination/background-destination-desktop.jpg';
+import PageTitle from '../components/Typography/PageTitle';
 
 const Destination = () => {
   const [index, setIndex] = useState(0);
@@ -23,12 +24,7 @@ const Destination = () => {
       <NavbarWrapper />
 
       <Container component="main" maxWidth="lg" sx={{ my: 2 }}>
-        <Typography component="p" variant="h6" sx={{ textTransform: 'uppercase', fontWeight: 300, letterSpacing: isTablet ? 4 : 2 }}>
-          <Typography component="span" sx={{ color: 'rgba(255, 255, 255, 0.3)' }}>
-            01
-          </Typography>{' '}
-          Pick Your Destination
-        </Typography>
+        <PageTitle number="01" text="Pick Your Destination" />
 
         <Grid container spacing={2} sx={{ my: 2 }}>
           <Grid item xs={12} lg={6}>
