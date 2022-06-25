@@ -4,7 +4,6 @@ import { styled, useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
 
 import NavbarWrapper from '../components/Navigation/NavbarWrapper';
