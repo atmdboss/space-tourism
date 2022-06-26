@@ -28,7 +28,7 @@ const NavbarMobile = () => {
       <SVGImage src={HamburgerImage} width="25" height="15" alt="hamburger menu icon" onClick={handleOpen} />
 
       {/* links menu - hidden to the side */}
-      <LinksMenu sx={{ right: isOpen ? 0 : '-275px' }}>
+      <LinksMenu id="mobile-menu" sx={{ right: isOpen ? 0 : '-275px' }}>
         <Box sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
           <SVGImage src={CloseImage} width="25" height="25" alt="close icon" onClick={handleClose} />
         </Box>
@@ -63,9 +63,8 @@ const LinksMenu = styled(Box)(() => ({
   right: '-275px',
   top: 0,
   transition: 'right 300ms ease-in-out',
-  backdropFilter: 'blur(30px)',
-  backgroundColor: 'rgba(255, 255, 255, 0.04)',
   padding: '2rem',
+  backgroundColor: 'rgb(11, 13, 23)',
 }));
 
 const StyledNavLink = styled(NavLink)(() => ({
