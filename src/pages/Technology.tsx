@@ -104,7 +104,10 @@ const CarouselSteps: React.FC<{ index: number; updateIndex: (newIndex: number) =
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            border: '1px solid #ffffff',
+            border: '1px solid rgba(255, 255, 255, 0.4)',
+            '&:hover': {
+              border: '1px solid #ffffff',
+            },
           }}
         >
           {i + 1}

@@ -73,6 +73,18 @@ const LinkItem = styled('li')(() => ({
   margin: '0 1.7rem',
   position: 'relative',
   lineHeight: 1.7,
+  '&:hover': {
+    '&::after': {
+      content: "''",
+      width: '100%',
+      height: '3px',
+      backgroundColor: 'rgba(255, 255, 255, 0.4)',
+      position: 'absolute',
+      bottom: '-37px',
+      left: 0,
+      right: 0,
+    },
+  },
 }));
 
 const LinkItemActive = styled(LinkItem)(() => ({

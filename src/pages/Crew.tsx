@@ -110,7 +110,16 @@ const CarouselSteps: React.FC<{ index: number; updateIndex: (newIndex: number) =
         <Box
           key={i}
           onClick={() => updateIndex(i)}
-          sx={{ width: 20, height: 20, borderRadius: '50%', cursor: 'pointer', bgcolor: index === i ? '#ffffff' : 'rgba(255, 255, 255, 0.3)' }}
+          sx={{
+            width: 20,
+            height: 20,
+            borderRadius: '50%',
+            cursor: 'pointer',
+            bgcolor: index === i ? '#ffffff' : 'rgba(255, 255, 255, 0.3)',
+            '&:hover': {
+              bgcolor: index === i ? '#ffffff' : 'rgba(255, 255, 255, 0.7)',
+            },
+          }}
         />
       );
     }

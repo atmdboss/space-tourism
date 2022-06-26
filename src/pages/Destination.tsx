@@ -116,6 +116,18 @@ const ListItem = styled('li')(() => ({
   position: 'relative',
   cursor: 'pointer',
   flex: 1,
+  '&:hover': {
+    '&::after': {
+      content: "''",
+      width: '50%',
+      height: '3px',
+      backgroundColor: 'rgba(255, 255, 255, 0.4)',
+      position: 'absolute',
+      bottom: '-10px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+    },
+  },
 }));
 const ListItemActive = styled(ListItem)(() => ({
   '&::after': {
